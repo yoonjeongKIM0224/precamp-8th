@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>final</title>
+    <link rel="stylesheet" href="./final.css">
+    <script>
+        function changePhone1(){
+            const phone1 = document.getElementById("phone1").value //010, (이 문자열(배열)의 길이 구하기)
+            if(phone1.length === 3){
+                document.getElementById("phone2").focus() //focus()를 맞춰라...
+            }
+            //벨류가 세 글자면 포커스를 다음 인풋으로
+        }
+
+        // 함수 안에서의 상수는 함수 밖이나 다른 함수 안에서는 적용되지 않음. 그래도 헷갈리니까. . . 
+
+        function changePhone2(){
+            const phone2 = document.getElementById("phone2").value //(이 문자열(배열)의 길이 구하기)
+            if(phone2.length === 4){
+                document.getElementById("phone3").focus() //focus()를 맞춰라...
+            }
+        }
+
+        function changePhone3(){
+            const phone3 = document.getElementById("phone3").value //(이 문자열(배열)의 길이 구하기)
+            if(phone3.length === 4){
+                document.getElementById("number__btn").setAttribute("style", "background-color: gray")
+                document.getElementById("number__btn").setAttribute("style", "color: black")
+            }
+        }
+    </script>
+
+    <style>
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>코드캠프 회원가입</h1>
+        <input type="text" placeholder="이메일을 입력해 주세요.">
+        <span id="input__ment"></span>
+        <input type="text" placeholder="이름을 입력해 주세요.">
+        <span id="input__ment"></span>
+        <input type="text" placeholder="비밀번호를 입력해 주세요.">
+        <span id="input__ment"></span>
+        <input type="text" placeholder="비밀번호를 다시 입력해 주세요.">
+        <span id="input__ment"></span>
+
+        <div>
+            <input id="phone1" type="text" maxlength="3" size="3" oninput="changePhone1()">  -
+            <input id="phone2" type="text" maxlength="4" size="4" oninput="changePhone2()">  -
+            <input id="phone3" type="text" maxlength="4" size="4" oninput="changePhone3()"> 
+        </div>
+
+        <div>
+            <span>000000</span> <button id="number__btn" disabled = "disabled">인증번호 전송</button>
+        </div>
+
+        <div>
+            <span>03:00</span> <button disabled>인증확인</button>
+        </div>
+
+        <select>
+            <option selected disabled>지역을 선택하세요.</option>
+            <option>서울</option>
+            <option>인천</option>
+            <option>경기</option>
+        </select>
+
+        <div>
+            <input type="radio" name="gender" />여성 
+            <input type="radio" name="gender" />남성
+        </div>
+
+        <hr>
+        
+        <button disabled = "true">가입하기</button>
+    </div>
+</body>
+</html>

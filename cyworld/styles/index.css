@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.background{
+    width: 1024px;
+    height: 600px;
+    background-image: url('../images/background.png');
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.outerbox{
+    width: 808px;
+    height: 544px;
+    background-image: url('../images/outerbox.png');
+}
+
+.wrapper{
+    display: flex;
+    padding-left: 32px;
+    padding-top: 32px;
+}
+
+.wrapper__left{
+    width: 208px;
+    height: 472px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2px;
+}
+
+.wrapper__left__header{
+    margin-top: 26px;
+    font-size: 9px;
+    color: #55B2D4;
+    font-family: 'DungGeunMo';
+    text-transform: uppercase;
+}
+
+.wrapper__left__body{
+    width: 208px;
+    height: 430px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #999999;
+    box-sizing: border-box;
+}
+
+.wrppaer__left__body__top{
+    margin: 20px 30px;
+}
+
+.wrppaer__left__body__image{
+    width: 148px;
+    height: 133px;
+    background-color: #c4c4c4;
+}
+
+.wrppaer__left__body__top__hr{
+    width: 148px;
+    height: 0px;
+    border: 0.5px dashed black;
+    margin: 12px 0;
+    box-sizing: border-box;
+}
+
+.wrppaer__left__body__profiile{
+    line-height: 12px;
+    font-size: 9px;
+    color: #999999;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.wrppaer__left__body__profiile i{
+    width: 10px;
+    margin-right: 9px;
+    color: black;
+}
+
+.wrppaer__left__body__bottom{
+    margin: 0 37px 31px 31px;
+    opacity: 0.45;
+}
+
+.wrppaer__left__body__bottom__feelment{
+    font-size: 11px;
+}
+
+.wrppaer__left__body__bottom__feelselect{
+    width: 140px;
+    height: 18px;
+    font-size: 11px;
+    border-radius: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.wrapper__right{
+    width: 524px;
+    height: 472px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper__right__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 15px;
+    color: #55B2D4;  
+}
+
+.wrapper__right__header__leftment{
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+.wrapper__right__header__rightment{
+    font-family: 'DungGeunMo';
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.wrapper__right__body{
+    height: 430px;
+    width: 524px;
+    background-color: white;
+    box-sizing: border-box;
+    border: 1px solid #999999;
+    border-radius: 10px;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}

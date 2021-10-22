@@ -1,0 +1,45 @@
+ <!DOCTYPE html> <!-- 웹 브라우저한테 나는 html 최신버전이야라고 알려줌... -->
+<html lang="ko">
+<head>
+    <title>박스 모델 연습</title>
+
+    <style>
+        .wrapper{
+            width: 1000px;
+            height: 1000px;
+            background-color: skyblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+            border: 3px solid black;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .qqq{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            border: 3px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="qqq">Box111</div>
+    <div class="wrapper">
+        <div class="item">Box</div>
+        <div class="item">Box</div>
+        <div class="item">Box</div>
+    </div>
+    <div class="qqq">Box222</div>
+</body>
+</html>

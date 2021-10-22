@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>이벤트 감지</title>
+    <script>
+        // function은 기능
+        // 인풋3개의 벨류가 전부 있으면, 버튼 색깔을 바꿔라
+        //setAttribute 속성
+        //onkeyup="onchange()" 할 경우, 인풋을 다 입력하고 마우스를 한 번 클릭하지 않아도 바로 색깔 변경
+
+        //onchange, onkeyup 합쳐놓은 게 oninput
+
+        //인풋 작성 순서가 뒤죽박죽이어도 벨류가 채워지면 색깔이 변경되기 위해서는 모든 인풋(버튼 제외)에 oninput="aaa()" 기입
+        
+        // check Validation 유효성검사? 
+        function checkValidation(){
+            const eamil = document.getElementById("email").value
+            const password1 = document.getElementById("password__1").value
+            const password2 = document.getElementById("password__2").value
+
+            // 이메일이 비어있는 게 아니라면 !==
+            if(eamil !== "" && password1 !== "" && password2 !== ""){
+                document.getElementById("my__btn").setAttribute("style", "background-color: yellow;")
+            } else{
+                // document.getElementById("my__btn").setAttribute("style", "background-color: none;")
+                document.getElementById("my__btn").removeAttribute("style")
+                // removeAttribute 기존 값 삭제?
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <!-- 이 세 개가 다 채워지면 회원가입 버튼에 색깔이 들어오게  -->
+    <input id="email" type="text" placeholder="이메일을 입력해 주세요." oninput="checkValidation()"/><br>
+    <input id="password__1" type="password" placeholder="비밀번호를 입력해 주세요." oninput="checkValidation()"/><br>
+
+    <!-- <input id="password__2" type="password" placeholder="비밀번호를 확인해 주세요." onchange="checkValidation()" onkeyup="onchange()" /><br>  
+    밑에 거랑 동일함-->
+    <input id="password__2" type="password" placeholder="비밀번호를 확인해 주세요." oninput="checkValidation()" /><br>
+
+    <button id="my__btn">회원가입</button>
+</body>
+</html>
